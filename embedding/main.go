@@ -16,9 +16,9 @@ type person struct {
 	sex string
 }
 
-func (p *person) getName() string {
-	return fmt.Sprintf("struct person %s %s", p.firstName, p.lastName)
-}
+// func (p *person) getName() string {
+// 	return fmt.Sprintf("struct person %s %s", p.firstName, p.lastName)
+// }
 
 func main() {
 	p := person{
@@ -35,7 +35,7 @@ func main() {
 	p.firstName = "Wang"
 
 	fmt.Println(p.firstName)
-	fmt.Println(p.getName())
+	fmt.Println(p.getName()) //编译时，方法接收者实际转换为p.name
 	fmt.Println(p.name.getName())
 
 }
